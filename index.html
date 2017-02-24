@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+   <head>
+     <link rel="stylesheet" type="text/css" href="./styles.css">
+     <meta charset = "UTF-8">
+     <title>timer</title>
+   </head>
+   <body>
+      <div class="app">
+        <div id="main">
+            <span>
+              <h2 id="day">0</h2>
+              <p>days</p>
+            </span>
+        </div>
+        <div id="main">
+            <span>
+              <h2 id="hour">0</h2>
+              <p>hours</p>
+            </span>
+        </div>
+        <div id="main">
+            <span>
+              <h2 id="minute">0</h2>
+              <p>minutes</p>
+            </span>
+        </div>
+        <div id="main">
+            <span>
+              <h2 id="second">0</h2>
+              <p>seconds</p>
+            </span>
+        </div>
+      </div>
+      <script>
+        var time = 0;
+        function calculateTime(){
+          time++;
+          var domDay = document.getElementById('day');
+          var domHour = document.getElementById('hour');;
+          var domMinute = document.getElementById('minute');;
+          var domSecond = document.getElementById('second');;
+          domDay.innerHTML = Math.floor(time/(3600*24));
+          domHour.innerHTML = Math.floor(time/3600) % 24;
+          domMinute.innerHTML = Math.floor(time/60) % 60;
+          domSecond.innerHTML = time % 60;
+        }
+        //change the set interval timer to 1 instead of 1000 to see days/hours function without waiting too long
+        function timer(){
+          setInterval(calculateTime, 1000)
+        }
+        document.addEventListener('DOMContentLoaded', function(){
+          timer();
+        })
+      </script>
+   </body>
+
+</html>

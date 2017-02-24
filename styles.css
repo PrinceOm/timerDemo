@@ -1,0 +1,18 @@
+div #main {
+  width: 75px;
+  height: 90px;
+  margin: 5px 5px 5px 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+h2 {
+  margin-bottom: 0px;
+}
+
+p {
+  margin-top: 0px;
+  color: gray;
+}
